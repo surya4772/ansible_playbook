@@ -15,12 +15,12 @@
 
     - name: copy war file 
       copy: 
-        src: "{{ workspace }}/gameoflife-0.0.1.war"
-        dest: "/tmp/gamefolder/gameoflife-0.0.1.war"
+        src: "{{ workspace }}/gameoflife-0.0.2.war"
+        dest: "/tmp/gamefolder/gameoflife.war"
         mode: 0777
 
     - name: executing war
-      shell: "nohup java -jar gameoflife-0.0.1.war &"
+      shell: "nohup java -jar gameoflife.war &"
       args: 
         chdir: /tmp/gamefolder/
       become: true
